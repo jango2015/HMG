@@ -1,0 +1,28 @@
+// tapcolor
+@mixin setTapColor($c:rgba(0,0,0,0)) {
+    -webkit-tap-highlight-color: $c;
+}
+
+// tap background
+@mixin setTapBackgroundColor($c: #E4E4E4){
+	&:active {
+		background-color: $c;
+	}
+}
+
+//user action
+@mixin no_select() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+@import "../helper/fn";
+
+/* === Grid === */
+.weui-row {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+  @include align-items(flex-start);
+  > [class*="col-"] {
+    box-sizing: border-box;
+  }
+}
+$cols: 5, 10, 15, 20, 25, 100/3, 40, 50, 60, 100*(2/3), 75, 80, 85, 90, 95, 100;
+.weui-row {
+  .col-auto {
+    width: 100%;
+  }
+  @mixin mins($i: length($cols)) {
+    @if  $i > 0 {
+        $divider: nth($cols, $i);
+        $className: floor($divider);
+        $n: floor(100/$divider*1);
+        $n-1: $n - 1;
+        .weui-col-#{$className} {
+          width: calc((100% - 15px*#{$n-1}) / #{$n});   
+        }
+        &.weui-no-gutter {
+          .weui-col-#{$className} {
+            width: percentage($divider/100);
+          }
+        }
+        @include mins(($i - 1));
+    }
+  }
+
+  @include mins();
+
+  @mixin minsb($j: 1) {
+
+    @if $j < length($cols) {
+        $divider: nth($cols, $j);
+        $className: floor($divider);
+        .weui-col-auto:nth-last-child(#{$j}), 
+        .weui-col-auto:nth-last-child(#{$j}) ~ .weui-col-auto {
+          $j-1: $j - 1;  
+          width: calc((100% - 15px*#{$j-1}) / #{$j});   
+        }
+        &.weui-no-gutter {
+          .weui-col-auto:nth-last-child(#{$j}), 
+          .weui-col-auto:nth-last-child(#{$j}) ~ .weui-col-auto {
+            width: calc(100% / #{$j});
+          }
+        }
+
+        @include minsb(($j + 1));      
+    }
+
+  } 
+
+  @include minsb();
+
+}
+
+@media all and (min-width:768px) {
+  .row {
+    @mixin mins($i: length($cols)) {
+        @if $i > 0 {
+          $divider: nth($cols, $i);
+          $className: floor($divider);
+          $n: floor(100/$divider*1);
+          $n-1: $n - 1;
+          .tablet-#{$className} {
+            width: calc((100% - 15px*#{$n-1}) / #{$n});
+          }
+          &.no-gutter {
+            .tablet-#{$className} {
+              width: percentage($divider/100);
+            }
+          }
+
+          @include mins(($i - 1));          
+        }
+
+        
+    } 
+
+    @include mins();
+
+    @mixin minsb($j: 1) {
+        @if $j < length($cols) {
+          .tablet-auto:nth-last-child(#{$j}), 
+          .tablet-auto:nth-last-child(#{$j}) ~ .col-auto {
+            $j-1: $j - 1;  
+            width: calc((100% - 15px*$j-1) / #{$j});   
+          }
+          &.no-gutter {
+            .tablet-auto:nth-last-child(#{$j}), 
+            .tablet-auto:nth-last-child(#{$j}) ~ .tablet-auto {
+              width: calc(100% / $j);
+            }
+          }
+          @include minsb(($j + 1));         
+        }
+    }
+
+    @include minsb();
+  }
+
+}

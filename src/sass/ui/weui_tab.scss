@@ -1,0 +1,124 @@
+@import "../helper/fn";
+
+.weui_tabbar {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $defaultBackgroundColor; 
+
+    &:before {
+        @include setTopLine($globalBorderColor);
+    }
+}
+
+.weui_tabbar_item {
+    display: block;
+    flex: 1;
+    padding-top: .1rem;
+    color: $globalTextColor;
+    @include setTapBackgroundColor;
+    -webkit-tap-highlight-color: transparent;
+
+    &.weui_bar_item_on {
+        .iconfont,
+        .weui_tabbar_label {
+            color: $color-primary;
+        }
+    }
+}
+
+.weui_tabbar_icon {
+    margin: 0 auto;
+    width: 1.4rem;
+    height: 1.4rem;
+    text-align: center;
+    
+    .iconfont {
+        line-height: 1.4;
+        font-size: 1.2rem;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    & + .weui_tabbar_label {
+        margin-top: .1rem;
+    }
+}
+
+.weui_tabbar_label {
+    text-align: center;
+    color: $globalTextColor;
+    font-size: 12px;
+}
+
+.weui_navbar {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background-color: #fafafa;
+
+    &:after {
+        @include setBottomLine($globalBorderColor);
+    }
+
+    & + .weui_tab_bd {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+}
+
+.weui_navbar_item {
+    position: relative;
+    display: block;
+    flex: 1;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+        background-color: $tapDefaultBackgroundColor;
+    }
+
+    &.weui_bar_item_on {
+        background-color: #eaeaea;
+    }
+
+    &:after {
+        @include setRightLine(#cccccc);
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.weui_tab {
+    position: relative;
+    height: 100%;
+}
+
+.weui_tab_bd {
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 55px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.weui_tab_bd_item {
+    display: none;
+}
+
+.weui_tab_bd_item_active {
+    display: block;
+} 

@@ -1,0 +1,106 @@
+@import "../helper/fn";
+.m_headbar {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 2.2rem;
+    background-color: #f7f7f8;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #ffa42e;
+    &,
+    a {
+        color: #fff;
+    }
+    .m_headbar_left,
+    .m_headbar_right {
+        position: absolute;
+        height: 100%;
+        z-index: 2;
+    }
+    .m_headbar_left {
+        left: 0;
+    }
+    .m_headbar_right {
+        right: 0;
+    }
+    .m_headbar_title {
+        position: absolute;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 2.2rem;
+        text-align: center;
+    }
+    .m_headbar_search {
+        position: absolute;
+        top: 0;
+        left: 2.2rem;
+        right: 2.2rem;
+        height: 100%;
+        .m_headbar_search_inner {
+            position: relative;
+            margin-top: .3rem;
+            background: #ffc982;
+            height: 1.6rem;
+            border-radius: .15rem;
+            // &:after {
+            //  position: absolute;
+            //  top: 0;
+            //  right: .5rem;
+            //  content: '\e608';
+            //  font-family: 'iconfont';
+            //  font-size: 1rem;
+            //  color: #ffa42e;
+            // }
+            /*sunjg add 20160722*/
+            .search {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border:0;
+                background: #FFC982;
+                outline-color: #FFA42E;
+                outline-offset: 1px;
+                padding-right: 1.5rem;
+                padding-left: .3rem;
+                color:#A55F00;
+                overflow: hidden;
+                border-radius: 1.5rem;
+                &.active {
+                    display: block;
+                }
+            }
+            .search-icon:before {
+                position: absolute;
+                top: 0;
+                right: .5rem;
+                content: '\e608';
+                font-family: 'iconfont';
+                font-size: 1rem;
+                color: #ffa42e;
+            }
+        }
+    }
+    .prl {
+        padding: 0 .5rem;
+    }
+    .goback {
+        line-height: 2.1rem;
+        font-size: 1rem;
+    }
+    .scan {
+        font-size: 1.4rem;
+        color: #ffc982;
+    }
+    .goback,
+    .scan {
+        height: 100%;
+        &:active {
+            background: $weuiBtnPrimaryActiveBg;
+        }
+    }
+    & ~ .u_content {
+        top: 2.2rem;
+    }
+}

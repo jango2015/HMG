@@ -1,0 +1,54 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot?t=1463387764'); /* IE9*/
+  src: url('../iconfont/iconfont.eot?t=1463387764#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../iconfont/iconfont.woff?t=1463387764') format('woff'), /* chrome, firefox */
+  url('../iconfont/iconfont.ttf?t=1463387764') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../iconfont/iconfont.svg?t=1463387764#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-weixin:before { content: "\e611"; }
+.icon-app:before { content: "\e60a"; }
+.icon-list:before { content: "\e60b"; }
+.icon-tel:before { content: "\e61b"; }
+.icon-top:before { content: "\e623"; }
+.icon-visa:before { content: "\e613"; }
+.icon-ok:before { content: "\e61c"; }
+.icon-plus:before { content: "\e601"; }
+.icon-coupon:before { content: "\e617"; }
+.icon-dingdan:before { content: "\e614"; }
+.icon-search:before { content: "\e608"; }
+.icon-coupon1:before { content: "\e619"; }
+.icon-message:before { content: "\e60d"; }
+.icon-close:before { content: "\e61d"; }
+.icon-right:before { content: "\e61f"; }
+.icon-wallet:before { content: "\e61e"; }
+.icon-back:before { content: "\e60f"; }
+.icon-location:before { content: "\e610"; }
+.icon-minus:before { content: "\e622"; }
+.icon-scan:before { content: "\e609"; }
+.icon-cart:before { content: "\e600"; }
+.icon-star:before { content: "\e602"; }
+.icon-store:before { content: "\e603"; }
+.icon-orderok:before { content: "\e615"; }
+.icon-keep:before { content: "\e60e"; }
+.icon-score:before { content: "\e61a"; }
+.icon-category1:before { content: "\e606"; }
+.icon-alipay:before { content: "\e612"; }
+.icon-fax:before { content: "\e60c"; }
+.icon-service:before { content: "\e616"; }
+.icon-account:before { content: "\e604"; }
+.icon-category:before { content: "\e607"; }
+.icon-transport:before { content: "\e618"; }
+.icon-calendar:before { content: "\e605"; }
+.icon-more:before { content: "\e620"; }
+.icon-gift:before { content: "\e621"; }
+

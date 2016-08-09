@@ -1,0 +1,59 @@
+@import "../helper/fn";
+
+.m_counter {
+	display: table;
+    table-layout: fixed;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	border-radius: 3px;
+	vertical-align: middle;
+	border: 1px solid $globalBorderColor;
+    overflow: hidden;
+    background: $defaultBackgroundColor;
+
+	.m_counter_plus,
+	.m_counter_minus {
+		display: table-cell;
+		position: relative;
+		width: 1.6rem;
+		height: 100%;
+		vertical-align: top;
+
+		&:after {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+		    height: 100%;
+		    text-align: center;
+			font-family:"iconfont";
+			font-style: normal;
+    		font-size: .86rem;
+    		line-height: 1.6rem;
+		}
+	}
+
+	.m_counter_plus {
+		border-left: 1px solid $globalBorderColor;
+		&:after {
+			content: "\e601";
+		}
+	}
+	.m_counter_minus {
+		border-right: 1px solid $globalBorderColor;
+		&:after {
+			content: "\e622";
+		}
+	}
+	.m_counter_count {
+		display: table-cell;
+	    height: 100%;
+	    min-width: 2rem;
+	    max-width: 3rem;
+	    line-height: 1.6rem;
+	    font-size: .84rem;
+	    text-align: center;
+	    border: none;
+	    outline: none;
+	}
+}

@@ -1,0 +1,16 @@
+@import "../../../sass/helper/fn";
+
+$height: 44px;
+.weui-infinite-scroll {
+  height: $height - 20px;
+  line-height: $height - 20px;
+  padding: 10px;
+  text-align: center;
+
+  .infinite-preloader {
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: -4px;
+    @include preloader;
+  }
+}

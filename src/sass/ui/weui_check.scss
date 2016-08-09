@@ -1,0 +1,72 @@
+@import "../helper/fn";
+
+.weui_check_label {
+    @include setTapColor();
+}
+
+.weui_check{
+    position: absolute;
+    left: -9999em;
+}
+
+// method2 accessbility
+.weui_cells_radio{
+    .weui_cell_ft {
+        padding-left: $weuiCellInnerGapH;
+    }
+    .weui_cell {
+        &:active {
+            background-color: #ECECEC;
+        }
+    }
+}
+.weui_check {
+    // radio
+    .weui_cells_radio & {
+        &:checked {
+            & + .weui_icon_checked {
+                &:before {
+                    display: block;
+                    content: '\EA08';
+                    color: #09BB07;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.weui_cells_checkbox {
+    .weui_cell_hd {
+        padding-right: $weuiCellInnerGapH;
+    }
+    .weui_cell {
+        &:active {
+            background-color: #ECECEC;
+        }
+    }
+    .weui_icon_checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 23px;
+            display: block;
+        }
+    }
+}
+
+// method2 accessbility
+.weui_check {
+    // checkbox
+    .weui_cells_checkbox & {
+        &:checked {
+            & + .weui_icon_checked {
+                &:before {
+                    content: '\EA06';
+                    color: #09BB07;
+                }
+            }
+        }
+    }
+}
+

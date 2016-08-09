@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	    <meta name="format-detection" content="telephone=no,email=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="description" content="">
+	    <meta name="keywords" content="">
+	    <link rel="dns-prefetch" href="http://m.haitaocity.com">
+	    <link rel="stylesheet" href="../dist/css/common.css">
+	    <link rel="stylesheet" href="../dist/css/shopping.css">
+	    <title>购物车-海淘城</title>
+	    
+	</head>
+	<body>
+		<div id="viewport" class="u_viewport p_cart">
+			<header class="m_headbar">
+				<div class="m_headbar_left">
+					<a class="goback iconfont icon-back prl" href="javascript:history.back();"></a>
+				</div>
+				<h3 class="m_headbar_title">购物车</h3>
+			</header>
+			<footer id="cart_foot" class="m_footbar">
+		      	<div class="cart_foot">
+					<div class="selectAll">
+						<span id="selectAll" class="select"></span><label for="selectAll">全选</label>
+					</div>
+					<div class="total">
+						<i>合计</i>：<span>￥797.00</span>
+					</div>
+					<div class="right">
+						<a class="settlement" href="order.html">结算</a>
+						<span class="delete">删除</span>
+					</div>
+				</div>
+			</footer>
+			<div class="u_content">
+				<div id="cart_empty" class='cart_empty'><!--购物车为空时-->
+					<div class="empty_bg iconfont icon-cart"></div>
+					<p class="word">您的购物车里空空如也，赶紧去逛逛吧。</p>
+					<a class="togo" href="/index.html">去逛逛</a>
+				</div>
+				<div id="cart" class="cart"><!--购物车非空时-->
+					<div class="cart_cont">
+						<div class="cont_head">
+							<button class="edit_btn">编辑</button>
+						</div>
+						<div class="cart_list">
+							<ul>
+								<!--
+								<li>
+									<div class="radio_box"><span class="select"></span></div>
+									<div class="pc"><a href="product_detail.html"><img class="lazy" data-src="../photos/sort_pro01.jpg" alt=""/></a></div>
+									<div class="word">
+										<h3><a href="product_detail.html">(保税区发货) 荷兰Nutrilon 原装正品荷兰生产牛栏婴幼儿奶粉 3段 (10-12个月宝宝)...</a></h3>
+										<div class="infor">
+											<div class="data">
+												<p class="specifications">规格<span>2罐</span></p>
+												<p class="warehouse">仓库<span>虎门保税仓</span></p>
+												<p class="price">￥25.00</p>
+											</div>
+											<div id="counter" class="count" data-max="5">
+												<button class="m_counter_minus">-</button>
+												<input class="m_counter_count" type="number" name="counts" value="1" />
+												<button class="m_counter_plus">+</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="radio_box"><span class="select on"></span></div>
+									<div class="pc"><a href="product_detail.html"><img class="lazy" data-src="../photos/sort_pro01.jpg" alt=""/></a></div>
+									<div class="word">
+										<h3><a href="product_detail.html">英国Vaseline凡士林 深层滋润护唇霜 原味 20g  </a></h3>
+										<div class="infor">
+											<div class="data">
+												<p class="specifications">规格<span>25ML</span></p>
+												<p class="warehouse">仓库<span>英国直邮</span></p>
+												<p class="price">￥25.00</p>
+											</div>
+											<div class="count">
+												<button type="button">-</button>
+												<input type="number" name="counts" value="1" />
+												<button type="button">+</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								-->
+								
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script id="template" type="text/template7">
+	    {{#each items}}
+		    <li>
+				<div class="radio_box"><span class="select"></span></div>
+				<div class="pc"><a href="product_detail.html"><img class="lazy" data-src="../photos/sort_pro01.jpg" alt=""/></a></div>
+				<div class="word">
+					<h3><a href="product_detail.html">{{title}}</a></h3>
+					<div class="infor">
+						<div class="data">
+							<p class="specifications">规格<span>{{specifications}}</span></p>
+							<p class="warehouse">仓库<span>{{warehouse}}</span></p>
+							<p class="price">￥{{price}}</p>
+						</div>
+						<div class="count counter_box" data-max="5">
+							<button class="m_counter_minus">-</button>
+							<input class="m_counter_count" type="number" name="counts" value="1" />
+							<button class="m_counter_plus">+</button>
+						</div>
+					</div>
+				</div>
+			</li>
+	    {{/each}}
+	</script>
+	<script src="../dist/js/lib.js"></script>
+	<script src="../dist/js/cart.js"></script>
+</html>

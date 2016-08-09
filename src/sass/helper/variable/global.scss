@@ -1,0 +1,63 @@
+// font family
+$sansFont:"Helvetica Neue",Helvetica,Arial,sans-serif;
+$serifFont:Georgia, "Times New Roman",Times,serif;
+$wpFont:"Microsoft YaHei",sans-serif;
+$bizFont:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$globalFont:$sansFont;
+$globalFontSize:14px;
+
+// font color
+$globalLinkColor: #61749B;
+$globalDescColor: #B2B2B2;
+$globalWarnColor: #E64340;
+$globalNickNameColor: #576B95;
+$globalTextColor: #888;
+$globalTitleColor: #000;
+
+//border
+$globalBorderColor: #cdcdcd;
+$globalBorderColorE9:#e9e9e9;
+$globalBorderColorF5:#f5f5f5;
+$globalBorderColorF3:#f3f3f3;
+$globalBorderColorFa:#fafafa;
+
+//arrow
+$globalArrowColor: #C7C7CC;
+
+//component
+$itemActiveColor: #E4E4E4;
+
+//page
+$pageDefaultBackgroundColor: #f1f1f1;
+$defaultBackgroundColor: #fff;
+// tap background
+$tapDefaultBackgroundColor: #E4E4E4;
+
+// gap
+$gap5: 5px;
+$gap10: 10px;
+$gap15: 15px;
+
+//
+// Variables
+// --------------------------------------------------
+
+// 主色
+$color-primary: #ffa42e;
+$color-danger: #e60012;
+$color-warning: #f60;
+$color-success: #4cd964;
+
+$color-primary-active: darken($color-primary, 10%);
+$color-danger-active: darken($color-danger, 10%);
+$color-warning-active: darken($color-warning, 10%);
+$color-success-active: darken($color-success, 10%);
+
+$color-split: #e7e7e7;  //分割线的颜色
+$color-bg: #eee;
+$color-text: #3d4145; //文案色
+$color-text-secondary: #5f646e; //次级文案
+$color-text-gray: #808080; //灰色文案
+$color-text-gray-light: #EFEFF4; //更灰色文案
+
+$color-hairline: #D9D9D9;

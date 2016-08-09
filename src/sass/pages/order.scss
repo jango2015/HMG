@@ -1,0 +1,557 @@
+@import "helper/fn";
+
+.p_order{
+	
+	.u_content{
+		background:$pageDefaultBackgroundColor;
+		padding-bottom: 60px;
+		.tips{
+			text-align: center;
+			font-size: .7rem;
+			color:#ffa42e;
+			padding:.5rem 0 .3rem 0;
+			background:#ffffff;
+
+			span{
+				vertical-align: middle;
+				font-size: 1rem;
+				margin-right: .5rem;
+			}
+		}
+		.adress_box{
+			margin-top: .2rem;
+			@include flexbox();
+			@include align-items(flex-end);
+			@include justify-content(space-between);
+			font-size: .75rem;
+			color:#bdbebf;
+			padding:.5rem 0 1.2rem;
+			background: #ffffff url(../images/sure_order_bg.jpg) no-repeat bottom center;
+			background-size: 100% .3rem;
+
+			.adress_icon{
+				width:1rem;
+				font-size: 1.2rem;	
+				margin: 0 .4rem 0 .6rem;
+				color:#ffa42e;
+			}
+
+			.toRight{
+				margin:0 .6rem .2rem .4rem;
+				width:1rem;
+				font-size: 1rem;
+			}
+
+			.word_box{
+				flex:7;
+				.consignee{
+					@include flexbox();
+					@include justify-content(space-between);
+					line-height: 1rem;
+				}
+				.adressOption{
+					line-height: 1rem;
+					margin-top: .3rem;
+
+				}
+				.name,.phone,.adress{
+					color:#000000;
+				}	
+			}
+		}
+		.order_list{
+			ul{
+				overflow:hidden;
+
+				li{
+					border:1px #e5e5e5 solid;
+					border-left: none;
+					border-right: none;
+					margin-top: .2rem;
+					background: #ffffff;
+
+					.item{
+						font-size: .75rem;
+						border-bottom: 1px #e5e5e5 solid;
+						line-height: 3em;
+						text-indent: .3rem;
+					}
+					.goods_infor{
+						@include flexbox();
+						padding:.4rem .3rem;
+
+						.pc{
+							width:5rem;
+							height:5rem;
+							border:1px #f2f5f7 solid;
+							overflow:hidden;
+							position: relative;
+							
+							a{
+								width:100%;
+								height:100%;
+							}
+							img{
+								position:absolute;
+								top:50%;
+								left:50%;
+								margin:-50% 0 0 -50%;
+							}
+						}
+						.cont{
+							flex:2;
+							margin-left: .3rem;
+
+							h3{
+								font-size: .7rem;
+								
+								a{
+									height:2rem;
+									overflow:hidden;
+									line-height: 1rem;
+									color:#808080;
+								}
+							}
+							.other{
+								@include flexbox();
+								@include align-items(flex-end);
+								@include justify-content(space-be);
+								height:3rem;
+
+								.price{
+									color:#e60012;
+									margin-left: .3rem;
+								}
+								.counts{
+									margin-right: .3rem;
+								}
+							}
+						}
+					}
+					.other_infor_box{
+						padding:0 .3rem;
+						font-size: .7rem;
+
+						.other_infor{
+							@include flexbox();
+							@include justify-content(space-be);
+							border-top: 1px #e9e9e9 solid;
+							padding:.5rem 0;
+							color:#808080;
+
+							.counts{
+								span{
+									color:#000000;
+									margin:0 .2rem;
+								}
+							}
+							.money{
+								span{
+									color:#e60012;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+		.coupon_box{
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-be);
+			margin:.2rem 0 0;
+			padding:1rem .3rem;
+			background:#ffffff;
+			border:1px #d5d6d7 solid;
+			border-left: none;
+			border-right: none;
+			font-size: .7rem;
+
+			.cont{
+				flex:1;
+
+				span{
+					color:#e60012;
+				}
+			}
+			.arrow{
+				width:1rem;
+				height:1rem;
+				display:block;
+				color:#bfbfbf;
+			}
+		}
+		.pay_box{
+			background: #ffffff;
+			margin-top: .2rem;
+
+			.pay_money{
+				border-top: 1px #D5D6D7 solid;
+				position:relative;
+				font-size: .7rem;
+
+				i{
+					font-style: normal;
+				}
+				p{
+					line-height: 1.1rem;
+					padding:.5rem 0;
+					text-align: center;
+
+					span{
+						color:#e81021;
+
+						i{
+							font-size: .8rem;
+						}
+					}
+				}
+				.counts{
+					position:absolute;
+					top:.5rem;
+					left:.3rem;
+					line-height: 1.1rem;
+
+					i{
+						color:#808080;
+					}
+				}
+			}
+			.pay_way{
+				border-top: 1px #D5D6D7 solid;
+				overflow:hidden;
+				padding-bottom: .7rem;
+
+				a{
+					display:block;
+					margin:.7rem auto 0;
+					width:80%;
+					text-align: center;
+					font-size: .8rem;
+					line-height: 2.2rem;
+					color:#ffffff;
+					border-radius: 5px;
+
+					span{
+						font-size: 1rem;
+						margin-right: 1.6rem;
+						vertical-align: middle;
+					}
+					
+				}
+				.weixin_pay{
+					background:#51c332;
+
+					span{
+						font-size: 1.2rem;
+					}
+				}
+				.zhifubao_pay{
+					background:#1499ff;
+				}
+			}
+		}
+		.order_single{
+			border:1px #e5e5e5 solid;
+			border-left: none;
+			border-right: none;
+			margin-top: .2rem;
+			background: #ffffff;
+			.goods_infor{
+				@include flexbox();
+				padding:.4rem .3rem;
+
+				.pc{
+					width:5rem;
+					height:5rem;
+					border:1px #f2f5f7 solid;
+					overflow:hidden;
+					position: relative;
+					
+					a{
+						width:100%;
+						height:100%;
+					}
+					img{
+						position:absolute;
+						top:50%;
+						left:50%;
+						margin:-50% 0 0 -50%;
+					}
+				}
+				.cont{
+					flex:2;
+					margin-left: .3rem;
+
+					h3{
+						font-size: .7rem;
+						
+						a{
+							height:2rem;
+							overflow:hidden;
+							line-height: 1rem;
+							color:#808080;
+						}
+					}
+					.other{
+						@include flexbox();
+						@include align-items(flex-end);
+						@include justify-content(space-be);
+						height:3rem;
+
+						.price{
+							color:#e60012;
+							margin-left: .3rem;
+						}
+						.counts{
+							margin-right: .3rem;
+						}
+					}
+				}
+			}
+		}
+		.address_page{
+			display:none;
+		    position: absolute;
+		    top: 0;
+		    bottom: 2.5rem;
+		    left: 0;
+		    right: 0;
+
+			.address-row{
+				@include flexbox();
+	    		@include align-items(center);
+				background: #ffffff;
+				padding:.3rem 0;
+				border-bottom: 1px #e5e5e5 solid;
+				.address-check{
+					i{
+						display:block;
+						width:1rem;
+						height:1rem;
+						border:1px #cccccc solid;
+						border-radius: 50%;
+						margin:0 .3rem;
+						&:before{
+							display:block;
+							content:'';
+							width:60%;
+							height:60%;
+							margin:20% auto;
+							border-radius: 50%;
+						}
+					}
+					.icon-xuanzhong{
+						border-color: #ffa42e;
+						&:before{
+							background:#ffa42e;
+						}
+					}
+				}
+				.address-col-row{
+			    	font-size: .75rem;
+			    	padding:0 .3rem;
+			    	flex:1;
+					.address-col2{
+						@include flexbox();
+						@include justify-content(space-between);
+						line-height: 1rem;
+						color:#333333;
+					}
+					.address-col3,.address-col4{
+						line-height: 1rem;
+						margin-top: .3rem;
+						color:#666666;
+
+					}
+			    }
+			    .active{
+			    	background:#ffa42e;
+			    	.address-col2,.address-col3,.address-col4{
+			    		
+			    		color:#ffffff;
+			    	}
+			    }
+			}
+		    
+			.navbar{
+				position:fixed;
+				bottom:0;
+				left:0;
+				width:100%;
+				background:#ffffff;
+				height:2.5rem;
+				border-top: 1px #cdcdcd solid;
+				@include flexbox();
+				@include justify-content(space-between);
+
+				.adds_edit{
+					width:50%;
+					line-height:2.5rem;
+					text-align: center;
+					margin-left: 50%;
+					color:#ffffff;
+					background:#ffa42e;
+				}
+				.adds_add,.adds_ok{
+					width:50%;
+					line-height:2.5rem;
+					text-align: center;
+					color:#ffa42e;
+				}
+				.adds_ok{
+					color:#ffffff;
+					background:#ffa42e;
+				}
+				.adds_add{
+					position:relative;
+
+					.item-alink{
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+					}
+				}
+				.adds_delete{
+					display:none;
+				}
+			}
+		    
+		}
+		.address_null{
+			margin-top:.3rem;
+			background:#ffffff;
+			text-align: center;
+			a{
+				font-size: .7rem;
+				line-height: 2rem;
+				color:#666666;
+				text-decoration: underline;
+			}
+		}
+		.section_p10{
+			padding: 10px;
+			color: #333;
+			font-size: 14px;
+		}
+		#addressForm input{
+			width: 100%;
+			margin-bottom: 10px;
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			height: 36px;
+			font-size: 14px;
+			padding-left: 10px;
+		}
+		.footer-col1{
+			float: left;
+			width: auto;
+		}
+		.footer-col2{
+			width: 50%;
+			float: right;
+		}
+		.footer-col3{
+			width: 50%;
+			float: left;
+		}
+		.footer-col4{
+			float: left;
+			margin-left: 15px;
+		}
+		.footer-row{
+			height: 50px;
+			line-height: 50px;
+		}
+		h5{
+			margin: 10px 0;
+			font-size: 14px;
+		}
+		.express-address select{
+			margin-right: 2px;
+			height: 36px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			margin-bottom: 10px;
+		}
+		.clearfix:after{
+			display:block;
+			content:'';
+			height:0;
+			visibility:hidden;
+			clear:both;
+		}
+		.cancel{
+			background: #ccc;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			box-shadow: 0 -1px 0px #CDCDCD;
+			-webkit-box-shadow: 0 -1px 0px #CDCDCD;
+			-moz-box-shadow: 0 -1px 0px #CDCDCD;
+			cursor: pointer;
+			display: block;
+		}
+		.ensure2{
+			background: #ff0000;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			box-shadow: 0 -1px 0px #CDCDCD;
+			-webkit-box-shadow: 0 -1px 0px #CDCDCD;
+			-moz-box-shadow: 0 -1px 0px #CDCDCD;
+			cursor: pointer;
+			display: block;
+			line-height: 50px;
+		}
+		.coupon-title {
+			padding: 10px;
+			margin: 10px 0 8px 0;
+			display: inline-block;
+			background: #439FF4;
+			color: #fff;
+			border-right: 1px dashed #ECF0F1;
+		}
+		.container_module{
+			max-width: 640px;
+			height: auto;
+			margin: 0 auto;
+			display:none;
+		}
+		.coupon-item {
+			background: #fff;
+			padding: 10px 10px 10px 50px;
+			color: #666;
+			font-size: 14px;
+			margin-bottom: 14px;
+			position: relative;
+		}
+		.coupon-item input {
+			position: absolute;
+			left: 5%;
+			top: 35%;
+		}
+		.sure-c {
+			position: fixed;
+			bottom: 0;
+			font-size: 18px;
+			height: 50px;
+			color: #fff;
+			max-width: 640px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		.sure-c button {
+			width: 100%;
+			border: none;
+			height: 100%;
+			color: #fff;
+			background: #ff5000;
+			font-size: 20px;
+		}
+	}
+}

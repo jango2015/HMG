@@ -1,0 +1,160 @@
+@import "../helper/fn";
+
+// 存在样式优先级的问题，故这里对其他weui_btn的引用放在底部
+// 主要是button.weui_btn在weui_btn_plain下重写border-width
+
+.weui_btn {
+    &.weui_btn_mini {
+        line-height: $weuiBtnMiniHeight;
+        font-size: $weuiBtnMiniFontSize;
+        padding: 0 .75em;
+        display: inline-block;
+    }
+}
+
+button, input {
+    &.weui_btn {
+        width: 100%;
+        border-width: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        &:focus {
+            outline: 0;
+        }
+    }
+    &.weui_btn_inline,
+    &.weui_btn_mini {
+        width: auto;
+    }
+}
+
+/*gap between btn*/
+.weui_btn + .weui_btn {
+    margin-top: $weuiBtnDefaultGap;
+}
+
+.weui_btn.weui_btn_inline + .weui_btn.weui_btn_inline {
+    margin-top: auto;
+    margin-left: $weuiBtnDefaultGap;
+}
+
+.weui_btn_area {
+    margin: $weuiCellsMarginTop $weuiBtnDefaultGap .3em;
+    &.weui_btn_area_inline {
+        display: flex;
+        .weui_btn {
+            margin-top: auto;
+            margin-right: $weuiBtnDefaultGap;
+            width: 100%;
+            flex: 1;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.weui_btn {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: $weuiBtnFontSize;
+    text-align: center;
+    text-decoration: none;
+    color: $weuiBtnFontColor;
+    line-height: $weuiBtnHeight/$weuiBtnFontSize;
+    border-radius: $weuiBtnBorderRadius;
+    @include setTapColor();
+    overflow: hidden;
+    &:after {
+        content: " ";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid rgba(0, 0, 0, .2);
+        transform: scale(.5);
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-radius: $weuiBtnBorderRadius*2;
+    }
+
+    &.weui_btn_inline {
+        display: inline-block;
+    }
+}
+
+.weui_btn_default {
+    background-color: $weuiBtnDefaultBg;
+    color: $weuiBtnDefaultFontColor;
+    &:not(.weui_btn_disabled):visited {
+        color: $weuiBtnDefaultFontColor;
+    }
+    &:not(.weui_btn_disabled):active {
+        color: $weuiBtnDefaultActiveFontColor;
+        background-color: $weuiBtnDefaultActiveBg;
+    }
+}
+
+.weui_btn_primary {
+    background-color: $weuiBtnPrimaryBg;
+    &:not(.weui_btn_disabled):visited {
+        color: $weuiBtnFontColor;
+    }
+    &:not(.weui_btn_disabled):active {
+        color: $weuiBtnActiveFontColor;
+        background-color: $weuiBtnPrimaryActiveBg;
+    }
+}
+
+.weui_btn_warn {
+    background-color: $weuiBtnWarnBg;
+    &:not(.weui_btn_disabled):visited {
+        color: $weuiBtnFontColor;
+    }
+    &:not(.weui_btn_disabled):active {
+        color: $weuiBtnActiveFontColor;
+        background-color: $weuiBtnWarnActiveBg;
+    }
+}
+
+.weui_btn_disabled {
+    color: $weuiBtnDisabledFontColor;
+    &.weui_btn_default {
+        color: $weuiBtnDefaultDisabledFontColor;
+    }
+}
+
+.weui_btn_plain_primary {
+    color: $weuiBtnPrimaryBg;
+    border: 1px solid $weuiBtnPrimaryBg;
+    &:button, &input {
+        border-width: 1px;
+        background-color: transparent;
+    }
+    &:active {
+        border-color: $weuiBtnPrimaryActiveBg;
+    }
+    &:after {
+        border-width: 0;
+    }
+}
+
+.weui_btn_plain_default {
+    color: #5A5A5A;
+    border: 1px solid #5A5A5A;
+    button &, 
+    input & {
+        border-width: 1px;
+        background-color: transparent;
+    }
+    &:after {
+        border-width: 0;
+    }
+}

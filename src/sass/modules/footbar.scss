@@ -1,0 +1,28 @@
+@import "../helper/fn";
+
+.m_footbar {
+	position: absolute;
+    right: 0;
+    left: 0;	
+	bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0;
+    table-layout: fixed;
+    z-index: 10;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	
+    .weui_tabbar {
+        height: 100%;     
+    }
+
+    .icon-category {
+        line-height: 1.8;
+        font-size: .94rem;
+    }
+
+    & ~ .u_content {
+    	bottom: 2.5rem;
+    }
+}

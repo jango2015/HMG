@@ -1,0 +1,324 @@
+@import "helper/fn";
+.p_detail {
+    .m_headbar {
+        .icon-keep {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+            &:active {
+                background: $weuiBtnPrimaryActiveBg;
+            }
+        }
+    }
+    .u_content {
+        bottom: 2.2rem;
+    }
+    .focus_swiper {
+        height: 10rem;
+        overflow: hidden;
+        background: #fff;
+        .swiper-container {
+            height: 100%;
+            img {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: auto;
+                max-height: 9rem;
+            }
+        }
+    }
+    .pro-detail {
+        h3 {
+            overflow: hidden;
+            height: 2.8rem;
+            padding: .1rem .5rem;
+            font-size: .8rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #DEDEDE;
+            border-top: 1px solid #DEDEDE;
+            color: #000;
+        }
+        .pro-desc {
+            overflow: hidden;
+            padding: .2rem 0;
+            // border-bottom: 1px solid #DEDEDE;
+            font-size: .8rem;
+            .item {
+                float: left;
+                width: 50%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                .text {
+                    padding: 0 .5rem;
+                    color: #8C8C8C;
+                }
+                .icon {
+                    padding-right: 0;
+                    color: #D62626;
+                }
+                .price {
+                    color: #D62626;
+                }
+            }
+        }
+    }
+    .pro-img {
+        padding: .5rem;
+        font-size: .8rem !important;
+        line-height: 1.6 !important;
+        img {
+            display: block !important;
+            width: auto !important;
+            height: auto !important;
+            margin: 0 auto !important;
+        }
+    }
+    .weui_tabbar {
+        height: 2.2rem;
+        .weui_tabbar_item {
+            position: relative;
+            flex-basis: 40%;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        .weui_bar_item_first {
+            flex-basis: 20%;
+            .icon-shopping-cart {
+                font-size: 1rem;
+                &:before {
+                    content: '\e600';
+                }
+            }
+            .tabbar_label {
+                font-size: 0.6rem;
+                margin-top: -0.3rem;
+            }
+            .mark {
+                display: block;
+                opacity: 0;
+                position: absolute;
+                top: .2rem;
+                right: 20%;
+                background: #ff000e;
+                font-size: .4rem;
+                width: .8rem;
+                height: .8rem;
+                line-height: .8rem;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                transition: .5s;
+                &.active {
+                    transform: scale(1.5);
+                }
+            }
+        }
+        .btn {
+            line-height: 2.2rem;
+            color: #fff;
+        }
+        .btn-cart {
+            background: #ffa42e;
+        }
+        .btn-buy {
+            background: #ff5000;
+        }
+    }
+    // 弹出遮罩
+    .open-mask {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background: rgba(0, 0, 0, .5);
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 2.2rem;
+    }
+    //弹出页面
+    .open-page {
+        position: absolute;
+        top: 2.2rem;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        overflow: hidden;
+        width: 0;
+        background: #fff;
+        overflow-y: scroll;
+        padding-bottom: 2rem;
+        transition: .3s;
+        &.open {
+            width: 80%;
+        }
+        .weui_media_box {
+            padding: .5rem;
+        }
+        .weui_media_hd {
+            width: 4rem;
+            height: 4rem;
+            line-height: 3.8rem;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            .weui_media_appmsg_thumb {
+                width: auto;
+                max-width: 100%;
+                display: inline-block;
+            }
+        }
+        .weui_media_bd {
+            display: flex;
+            height: 4rem;
+            flex-direction: column;
+            justify-content: space-between;
+            .weui_media_desc {
+                color: #000;
+                font-size: .6rem;
+                line-height: 1.6;
+                -webkit-line-clamp: 3;
+            }
+            .open-price {
+                font-size: .7rem;
+                color: #D62626;
+            }
+        }
+        .ui_flex {
+            display: flex;
+            font-size: .6rem;
+            padding-top: .5rem;
+            color: #929292;
+            .text {
+                flex-basis: 20%;
+                width: 20%;
+                padding: .1rem .5rem 0 .5rem;
+            }
+            .inner_float {
+                flex-basis: 80%;
+                width: 80%;
+                .ui-btn {
+                    float: left;
+                    padding: .1rem 1rem;
+                    margin: 0 .5rem .5rem 0;
+                    border: 1px solid #ddd;
+                    border-radius: 2px;
+                    &.active {
+                        border-color: #D62626;
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .pro-store {
+            .text {
+                padding-top: 0;
+            }
+            .inner_float {
+                .ui-btn {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    color: #000;
+                }
+            }
+        }
+        .supply {
+            .text {
+                padding-top: 0;
+            }
+            .inner_float {
+                .ui-btn {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    strong {
+                        color: #F99515;
+                        ;
+                    }
+                }
+            }
+        }
+        .amount {
+            .inner_float {
+                .ui-btn {
+                    margin: 0;
+                    color: #000;
+                    font-weight: bold;
+                    font-size: .8rem;
+                    &:nth-child(1) {
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                    &:nth-child(2) {
+                        border-left: none;
+                        border-right: none;
+                        border-radius: 0;
+                    }
+                    &:nth-child(3) {
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+            }
+        }
+        .weui_btn_warn {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.8rem;
+            line-height: 2.2rem;
+            border-radius: 0;
+        }
+    }
+    .animation {
+        display: block;
+        position: fixed;
+        bottom: 1.2rem;
+        right: 40%;
+        background: #ff000e;
+        font-size: .4rem;
+        width: .8rem;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        color: #fff;
+        border-radius: 50%;
+        z-index: 999;
+        opacity: 0;
+        &.active {
+            animation: mark_animation .3s;
+        }
+    }
+    @keyframes mark_animation {
+        0% {
+            bottom: 1.2rem;
+            right: 40%;
+            opacity: 0;
+        }
+        40% {
+            bottom: 3.4rem;
+            right: 65%;
+        }
+        50% {
+            bottom: 3.3rem;
+            right: 67%;
+        }
+        60% {
+            bottom: 3.2rem;
+            right: 70%;
+        }
+        70% {
+            bottom: 3.1rem;
+            right: 72%;
+            opacity: .9;
+        }
+        100% {
+            bottom: 1.2rem;
+            right: 80%;
+            opacity: .5;
+        }
+    }
+}

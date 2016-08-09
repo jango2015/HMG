@@ -1,0 +1,85 @@
+@import "helper/fn";
+@import "ui/weui_icon";
+
+.p_mb_address {
+	background:$pageDefaultBackgroundColor;
+
+	.m_headbar {
+		.calendar {
+			font-size: 1rem;
+			line-height: 2.2rem;
+		}
+	}
+	.m_footbar{
+		.footer-row{
+			@include flexbox();
+			
+			input{
+				width:100%;
+				line-height: 2.5rem;
+				font-size: .7rem;
+				border:none;
+				color:#ffffff;
+			}
+			.footer-col3{
+				flex:1;
+				.updateBasic{
+					background:#dddddd;
+				}
+			}
+			.footer-col2{
+				flex:1;
+				.updateBasic{
+					background:#ffa42e;
+				}
+			}
+		}
+	}
+	.u_content{
+		.info-row{
+			@include flexbox();
+			background:#ffffff;
+			font-size: .7rem;
+			padding:.3rem 0;
+			margin-bottom: .4rem;
+			line-height: 1.4rem;
+
+			.info-left{
+				width:25%;
+				min-width: 4rem;
+				text-align: center;
+			}
+			.info-right{
+				flex:2;
+				color:#b4b4b4;
+				padding-right: .3rem;
+				input{
+					width:100%;
+					height:1.4rem;
+					border:1px #eeeeee solid;
+					border-radius: 4px;
+					padding:0 .3rem;
+					color:#b4b4b4;
+					outline:none;
+				}
+				label{
+					margin-right: .5rem;
+					input{
+						width:auto;
+						height:auto;
+					}
+				}
+			}
+		}
+
+		
+
+	}
+	
+}
+i.icon-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2015%2015'%3E%3Cg%3E%3Cpath%20fill%3D'%2304BE02'%20d%3D'M1%2C1.6l11.8%2C5.8L1%2C13.4V1.6%20M0%2C0v15l15-7.6L0%2C0L0%2C0z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")!important;
+}
+i.icon-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2015%2015'%3E%3Cg%3E%3Cpath%20fill%3D'%2304BE02'%20d%3D'M14%2C1.6v11.8L2.2%2C7.6L14%2C1.6%20M15%2C0L0%2C7.6L15%2C15V0L15%2C0z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")!important;
+}

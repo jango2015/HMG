@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="dns-prefetch" href="http://m.haitaocity.com">
+    <link rel="stylesheet" href="../dist/css/common.css">
+    <link rel="stylesheet" href="../dist/css/entry.css">
+    <title>类别-海淘城</title>
+</head>
+
+<body>
+    <div id="viewport" class="u_viewport p_category">
+        <header class="m_headbar">
+            <div class="m_headbar_left">
+                <a class="goback iconfont icon-back prl" href="javascript:history.back();"></a>
+            </div>
+            <div class="m_headbar_search u_flex">
+                <div class="m_headbar_search_inner u_flex_cell" id="J_search_trigger">
+                </div>
+            </div>
+            <div class="m_headbar_right">
+                <a href="javascript:;" class="scan iconfont icon-scan prl"></a>
+            </div>
+        </header>
+        <footer class="m_footbar">
+            <div class="weui_tabbar">
+                <a href="index.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <i class="iconfont icon-store"></i>
+                    </div>
+                    <p class="weui_tabbar_label">首页</p>
+                </a>
+                <a href="category.html" class="weui_tabbar_item weui_bar_item_on">
+                    <div class="weui_tabbar_icon">
+                        <i class="iconfont icon-category"></i>
+                    </div>
+                    <p class="weui_tabbar_label">分类</p>
+                </a>
+                <a href="cart.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <i class="iconfont icon-cart"></i>
+                    </div>
+                    <p class="weui_tabbar_label">购物车</p>
+                </a>
+                <a href="memberIndex.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <i class="iconfont icon-account"></i>
+                    </div>
+                    <p class="weui_tabbar_label">我的</p>
+                </a>
+            </div>
+        </footer>
+        <div class="u_content">
+            <div class="m_body">
+                <div class="m_body_left">
+                    <ul class="nav_left">
+                    </ul>
+                </div>
+                <div class="m_body_right">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script id="templateNav" type="text/template7">
+    {{#each data}} {{#if @first}}
+    <li data-pid={{id}} class="active loaded "><a href="javascript:;">{{typeName}}</a></li>
+    {{else}}
+    <li data-pid={{id}}><a href="javascript:;">{{typeName}}</a></li>
+    {{/if}} {{/each}}
+</script>
+<script id="templateContent" type="text/template7">
+    {{#each data}} {{#if @first}}
+    <ul class="category{{parentId}} visible">
+        {{/if}}
+        <li>
+            <a href="productList.html?categoryId={{id}}">
+                <div class="u_thumb">
+                    <img src="/file/idcard/img?imgPath={{iconPath}}" alt="">
+                </div>
+                <p class="u_nowrap">{{typeName}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!-- <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script> -->
+<script src="../dist/js/lib.js"></script>
+<script src="../dist/js/category.js"></script>
+
+</html>
